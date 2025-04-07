@@ -317,9 +317,7 @@ class PQRController extends Controller
                 }
                 $id_aclaracion = $aclaracionNew->id;
                 if ($email) {
-                    Mail::to($email)->send(
-                        new ConstanciaAclaracion($id_aclaracion)
-                    );
+                    Mail::to($email)->send(new ConstanciaAclaracion($id_aclaracion));
                 }
                 //----------------------------------------------------------------------
                 $contadorAnexos += $request["totalanexos$i"];
